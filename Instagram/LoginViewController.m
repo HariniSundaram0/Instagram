@@ -6,7 +6,7 @@
 //
 
 #import "LoginViewController.h"
-#import <Parse/Parse.h>
+#import "Parse/Parse.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
@@ -24,7 +24,10 @@
            NSLog(@"User log in failed: %@", error.localizedDescription);
        } else {
            NSLog(@"User logged in successfully");
-           [self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
+//           [self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
+           
+           UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+           self.view.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"tabBarController"];
            
            // display view controller that needs to shown after successful login
        }
@@ -44,6 +47,8 @@
                 NSLog(@"Error: %@", error.localizedDescription);
             } else {
                 NSLog(@"User registered successfully");
+                
+               
                 
                 // manually segue to logged in view
             }

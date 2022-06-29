@@ -1,17 +1,19 @@
 //
-//  feedCellTableViewCell.h
-//  Instagram
+//  DetailsViewController.h
+//  Pods
 //
-//  Created by Harini Sundaram on 6/28/22.
+//  Created by Harini Sundaram on 6/29/22.
 //
 
 #import <UIKit/UIKit.h>
 #import "Post.h"
+#import "DateTools.h"
+
 @import Parse;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface feedCellTableViewCell : UITableViewCell
+@interface DetailsViewController : UIViewController
 @property (strong, nonatomic) IBOutlet PFImageView *photoImageView;
 @property (strong, nonatomic) Post *post;
 
