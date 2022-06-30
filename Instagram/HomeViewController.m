@@ -7,12 +7,15 @@
 
 #import "HomeViewController.h"
 #import "Parse/Parse.h"
+#import "Parse/PFImageView.h"
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import "SceneDelegate.h"
 #import "feedCellTableViewCell.h"
+#import "DetailsViewController.h"
 #import "Post.h"
-@import Parse;
+
+//@import Parse;
 
 
 
@@ -108,28 +111,35 @@
     cell.likeCountLabel.text = [NSString stringWithFormat:@"%@", curr_post.likeCount];
 //    cell.photo
     cell.authorLabel.text = curr_post.author.username;
-    
-    
-    
-    
-    
-    
-    
     return cell; 
-    
-    
-    
-    
+  
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"detailsSegue"]) {
+        
+        NSIndexPath * myIndexPath = [self.tableView indexPathForCell:sender];
+        Post *postToSend = self.postArray[myIndexPath.row];
+        
+        DetailsViewController *detailsVC = [segue destinationViewController];
+        detailsVC.post = postToSend;
+        
+        
+        
+        
+        
+
+        
+    }
+    
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

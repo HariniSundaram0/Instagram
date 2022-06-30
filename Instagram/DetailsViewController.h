@@ -7,9 +7,15 @@
 
 #import <UIKit/UIKit.h>
 #import "Post.h"
+#import "Parse/Parse.h"
+#import "Parse/PFImageView.h"
 #import "DateTools.h"
 
-@import Parse;
+//#import "ParseUI"
+
+//#import "DateTools.h"
+
+//@import Parse;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *commentCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *authorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end
 

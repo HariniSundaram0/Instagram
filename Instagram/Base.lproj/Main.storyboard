@@ -147,7 +147,7 @@
                                             <outlet property="commentCountLabel" destination="kuC-rn-h9j" id="lJx-b0-QEO"/>
                                             <outlet property="likeCountLabel" destination="4Hz-aa-2MC" id="ftb-gS-4gT"/>
                                             <outlet property="photoImageView" destination="YVC-fO-Xi9" id="9f6-QX-mQn"/>
-                                            <segue destination="CiN-w3-i6N" kind="showDetail" id="9xS-cu-Y3x"/>
+                                            <segue destination="CiN-w3-i6N" kind="showDetail" identifier="detailsSegue" id="9xS-cu-Y3x"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -257,6 +257,14 @@
                         <viewLayoutGuide key="safeArea" id="g7K-Jh-OOY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="8Uz-OS-Bap" id="FWl-9U-j2k"/>
+                        <outlet property="captionLabel" destination="w0n-RV-MmI" id="T0R-ZK-mnk"/>
+                        <outlet property="commentCountLabel" destination="OGZ-Ga-e3D" id="6y8-qj-0Cw"/>
+                        <outlet property="dateLabel" destination="0kY-ab-dvF" id="gsA-1X-MKu"/>
+                        <outlet property="likeCountLabel" destination="4N0-Os-iO5" id="8bU-hM-Afd"/>
+                        <outlet property="photoImageView" destination="Etk-kx-diJ" id="Qzh-d5-FDf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdc-9v-Uoz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

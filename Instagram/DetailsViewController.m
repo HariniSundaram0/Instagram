@@ -15,6 +15,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.photoImageView.file = self.post[@"image"];
+    [self.photoImageView loadInBackground];
+    self.captionLabel.text = self.post.caption;
+    self.commentCountLabel.text = [NSString stringWithFormat:@"%@", self.post.commentCount];
+    self.likeCountLabel.text = [NSString stringWithFormat:@"%@", self.post.likeCount];
+//    cell.photo
+    self.authorLabel.text = self.post.author.username;
+    NSDate *curr_date = self.post.createdAt;
+    NSString *final_date = [curr_date.shortTimeAgoSinceNow stringByAppendingString:@" ago"];
+    [self.dateLabel setText: final_date];
+//    self.dateLabel.text = self
     // Do any additional setup after loading the view.
 }
 
