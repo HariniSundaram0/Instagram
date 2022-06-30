@@ -23,6 +23,8 @@
     self.likeCountLabel.text = [NSString stringWithFormat:@"%@", self.post.likeCount];
 //    cell.photo
     self.authorLabel.text = self.post.author.username;
+//    NSLog(self.authorLabel.text);
+//    NSLog(@"SHOULD HAVE LOGGED");
     NSDate *curr_date = self.post.createdAt;
     NSString *final_date = [curr_date.shortTimeAgoSinceNow stringByAppendingString:@" ago"];
     [self.dateLabel setText: final_date];
